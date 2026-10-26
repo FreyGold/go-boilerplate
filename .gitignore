@@ -57,5 +57,4 @@ tsconfig.tsbuildinfo
 .turbo
 .vscode
 
-go-boilerplate
-
+/backend/go-boilerplate
