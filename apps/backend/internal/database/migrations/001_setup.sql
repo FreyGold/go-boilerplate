@@ -1,6 +1,6 @@
--- Write your migrate up statements here
+-- This baseline migration does not change the database schema.
+SELECT 1;
 
 ---- create above / drop below ----
 
--- Write your migrate down statements here. If this migration is irreversible
--- Then delete the separator line above.
+SELECT 1;
