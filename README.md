@@ -1,3 +1,21 @@
+# Run the backend with Docker
+
+Run these commands from the repository root:
+
+```sh
+docker compose up --build -d
+docker compose logs -f backend
+```
+
+The backend is available at `http://localhost:8080`. Check its connection to PostgreSQL and Redis at `http://localhost:8080/status`. The API documentation is at `http://localhost:8080/docs`.
+
+Compose starts PostgreSQL and Redis first. The backend then runs the database migrations. Compose stores PostgreSQL data and Redis data in named volumes.
+
+The backend loads defaults from `apps/backend/.env.sample`. If `apps/backend/.env` exists, it overrides those defaults. Add your integration keys to `apps/backend/.env`.
+
+Compose sets the container addresses and database credentials. Set `POSTGRES_USER`, `POSTGRES_PASSWORD`, or `POSTGRES_DB` in the root `.env` file to change the database defaults. Set `BACKEND_PORT`, `POSTGRES_PORT`, or `REDIS_PORT` there to change the host ports. PostgreSQL uses its credentials only when it creates a new data volume.
+
+Stop the stack with `docker compose down`. This keeps the data volumes.
 
 # History
 ## 2026-10-21: What I Learned
