@@ -1,3 +1,17 @@
+# Create a project
+
+Install Bash, curl, Git, tar, and Node.js 22 or later. Run this command in the directory where you want to create the project:
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/FreyGold/go-boilerplate/main/scripts/create-project.sh | bash -s -- my-project
+```
+
+Replace `my-project` with your project name. Use lowercase letters, digits, and single hyphens. Start the name with a letter. The name must be at most 63 characters and must not end with a hyphen.
+
+The command creates `./my-project`, updates the project names, and removes the temporary clone. The new project has no Git history.
+
+The default Go module path is `github.com/freygold/my-project`. To set a different path, add `--module github.com/your-user/my-project` after `my-project` in the command. The creation scripts keep their references to this template repository.
+
 # Run the backend with Docker
 
 Run these commands from the repository root:
