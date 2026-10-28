@@ -3,7 +3,7 @@
 Install Bash, curl, Git, tar, and Node.js 22 or later. Run this command in the directory where you want to create the project:
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/FreyGold/go-boilerplate/main/scripts/create-project.sh | bash -s -- my-project
+curl -fsSL https://raw.githubusercontent.com/FreyGold/go-boilerplate/refs/heads/main/scripts/create-project.sh | bash -s -- my-project
 ```
 
 Replace `my-project` with your project name. Use lowercase letters, digits, and single hyphens. Start the name with a letter. The name must be at most 63 characters and must not end with a hyphen.

@@ -15,7 +15,7 @@ const root = dirname(dirname(fileURLToPath(import.meta.url)));
 const templateModule = "github.com/freygold/go-boilerplate";
 const templateCommand = join(root, "apps/backend/cmd/go-boilerplate");
 const creationScriptUrl =
-  "https://raw.githubusercontent.com/FreyGold/go-boilerplate/main/scripts/create-project.sh";
+  "https://raw.githubusercontent.com/FreyGold/go-boilerplate/refs/heads/main/scripts/create-project.sh";
 const usage =
   "Usage: node scripts/init-project.mjs <name> [--module <module-path>]";
 const excludedEntries = new Set([
@@ -118,7 +118,7 @@ function makeReplacer(name, modulePath) {
     .join(" ");
   const envPrefix = name.replaceAll("-", "_").toUpperCase();
   const pattern =
-    /https:\/\/raw\.githubusercontent\.com\/FreyGold\/go-boilerplate\/main\/scripts\/create-project\.sh|github\.com\/freygold\/go-boilerplate|go[- ]boilerplate|boilerplate/gi;
+    /https:\/\/raw\.githubusercontent\.com\/FreyGold\/go-boilerplate\/refs\/heads\/main\/scripts\/create-project\.sh|github\.com\/freygold\/go-boilerplate|go[- ]boilerplate|boilerplate/gi;
 
   return (text) =>
     text.replace(pattern, (match) => {

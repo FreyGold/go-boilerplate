@@ -217,7 +217,7 @@ templateTest(
 
     for (const file of projectTextFiles(project)) {
       const projectContent = file.content.replaceAll(
-        "https://raw.githubusercontent.com/FreyGold/go-boilerplate/main/scripts/create-project.sh",
+        "https://raw.githubusercontent.com/FreyGold/go-boilerplate/refs/heads/main/scripts/create-project.sh",
         "",
       );
       assert.doesNotMatch(projectContent, /boilerplate/i, file.name);

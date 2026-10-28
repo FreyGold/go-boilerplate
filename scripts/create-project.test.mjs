@@ -151,7 +151,7 @@ templateTest(
     );
     assert.match(
       readFileSync(join(project, "README.md"), "utf8"),
-      /FreyGold\/go-boilerplate\/main\/scripts\/create-project\.sh/,
+      /FreyGold\/go-boilerplate\/refs\/heads\/main\/scripts\/create-project\.sh/,
     );
     assert.deepEqual(readdirSync(context.scratch), []);
   },
